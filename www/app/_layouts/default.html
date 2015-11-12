@@ -1,19 +1,48 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  {% include whc-head.html %}
-    <body class="one-page" data-target=".single-menu" data-spy="scroll" data-offset="200">
-        <div class="body">
-        {% include whc-header.html %}
-            <div role="main" class="main" id="home">
-                <div id="content" class="content full">
-                    {% include whc-slider.html %}
-                    {% include whc-services.html %}
-                    {% include whc-careaboutnonprofits.html %}
-                    {% include whc-mission.html %}
-                </div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- build:css({app,.tmp}) /css/main.css -->
+        <!-- Syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="/css/main.css">
+        <!-- endbuild -->
+
+    </head>
+    <body>
+
+        <div class="site">
+          <div class="header">
+            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+            <a class="extra" href="/">home</a>
+          </div>
+
+          {{ content }}
+
+          <div class="footer">
+            <div class="contact">
+              <p>
+                Josh Cox<br />
+                <a href="mailto:josh@webhosting.coop">josh@webhosting.coop</a>
+              </p>
             </div>
+            <div class="contact">
+              <p>
+                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
+                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+              </p>
+            </div>
+          </div>
         </div>
-      {% include whc-footer.html %}
-      {% include whc-script-footer.html %}
+
+    <!-- build:js({app,.tmp}) /js/scripts.js -->
+    <script src="/js/main.js"></script>
+    <!-- endbuild -->
     </body>
 </html>
