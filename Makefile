@@ -28,10 +28,12 @@ rundocker:
 	$(eval TMP := $(shell mktemp -d --suffix=DOCKERTMP))
 	$(eval NAME := $(shell cat NAME))
 	$(eval TAG := $(shell cat TAG))
+	$(eval UID := $(shell id -u))
 	chmod 777 $(TMP)
 	@docker run --name=$(NAME) \
 	--cidfile="cid" \
 	-d \
+	-e "DOCKER_UID=$(UID)" \
 	-p 3000:3000 \
 	-p 3001:3001 \
 	-v $(TMP):/tmp \
