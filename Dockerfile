@@ -10,8 +10,8 @@ WORKDIR /srv/www
 ADD www/. /srv/www/
 ADD www/.* /srv/www/
 RUN rm -Rf app
-RUN git clone https://github.com/WebHostingCoopTeam/jekyll.foundation.whc.git app
-RUN cd app; git remote add ssh git@github.com:WebHostingCoopTeam/jekyll.foundation.whc.git
+RUN git clone https://github.com/joshuacox/test.braintree.ruby.git app
+RUN cd app; git remote add ssh git@github.com:joshuacox/test.braintree.ruby.git
 RUN sudo chown -R yeoman. /srv/www 
 USER yeoman
 
