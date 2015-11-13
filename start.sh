@@ -1,5 +1,4 @@
 #!/bin/bash
-source /home/yeoman/.rvm/scripts/rvm
 
   # Check for a passed in DOCKER_UID environment variable. If it's there
   # then ensure that the yeoman user is set to this UID. That way we can
@@ -17,10 +16,10 @@ source /home/yeoman/.rvm/scripts/rvm
   fi
 
 
-cd /srv/www/app
-git pull
-cd /srv/www
-grunt serve
-#sleep 1
-#echo "debug hang"
-#sleep 600
+echo -n "whoami? "
+whoami
+chown -R yeoman. /home/yeoman
+chown -R yeoman. /srv/www
+time sync
+
+sudo -u yeoman /bin/bash -c "/srv/www/run.sh"

@@ -24,5 +24,7 @@ RUN ["/bin/bash", "-c",  "source /home/yeoman/.rvm/scripts/rvm ; bower install"]
 EXPOSE 3000 3001
 
 ADD start.sh /srv/www/
+ADD run.sh /srv/www/
 # RUN cd app; git pull
+USER root
 CMD ["/bin/bash", "-c",  "source /home/yeoman/.rvm/scripts/rvm ; ./start.sh"]
